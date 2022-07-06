@@ -14,6 +14,11 @@ const handleUserInput = function (key, conn) {
   else if (key === "d" ){
     connection.write("Move: right");
   }
+
+  //special messages
+  else if (key === "f" ){
+    connection.write("Say: Press F to respect");
+  }
   //exit if CTRL C is pressed
   else if (key === '\u0003') {
     process.exit();
