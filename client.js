@@ -14,10 +14,17 @@ const connect = function () {
   conn.on("connect", () =>{
     conn.write("Name: DF");
   });
+  
   //start console logging data
   conn.on("data", (data) => {
     console.log(`${data}`);
   });
+
+  //movement on connect
+  conn.on("connect", () =>{
+
+  });
+  
 
 
 

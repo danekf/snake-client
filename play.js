@@ -1,7 +1,7 @@
 const client = require("./client.js")
 
 //handling input
-const handleUserInput = function () {
+const handleUserInput = function (key) {
   
   //exit if CTRL C is pressed
   if (key === '\u0003') {
@@ -12,9 +12,9 @@ const handleUserInput = function () {
 
 //given setup by LHL
 const setupInput = function () {
-  stdin.on("data", handleUserInput);
 
   const stdin = process.stdin;
+  stdin.on("data", handleUserInput);
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
@@ -22,6 +22,7 @@ const setupInput = function () {
 };
 
 
+
 console.log("Connecting ...");
 client.connect();
-//setupInput();
+setupInput();
