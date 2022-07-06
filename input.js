@@ -2,16 +2,16 @@ let connection;
 
 //handling input
 const handleUserInput = function (key, conn) {
-  if (key === "w" ){
+  if (key === "w" || key === "W" ){
     connection.write("Move: up");
   }
-  else if (key === "a" ){
+  else if (key === "a" || key === "A" ){
     connection.write("Move: left");
   }
-  else if (key === "s" ){
+  else if (key === "s" || key === "S" ){
     connection.write("Move: down");
   }
-  else if (key === "d" ){
+  else if (key === "d" || key === "D" ){
     connection.write("Move: right");
   }
 
