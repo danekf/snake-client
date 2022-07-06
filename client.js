@@ -14,7 +14,7 @@ const connect = function () {
   conn.on("connect", () =>{
     conn.write("Name: DF");
   });
-  
+
   //start console logging data
   conn.on("data", (data) => {
     console.log(`${data}`);
@@ -24,13 +24,7 @@ const connect = function () {
   conn.on("connect", () =>{
 
   });
-  
-
-
-
-  return conn;
-
-  
+    return conn;
 };
 
 module.exports = {connect};
