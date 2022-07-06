@@ -10,10 +10,16 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  //start console logging data once connection is established
-  conn.on("connect", (data) => {
-    console.log(data);
+  //do things on connection established
+  conn.on("connect", () =>{
+    conn.write("Name: DF");
   });
+  //start console logging data
+  conn.on("data", (data) => {
+    console.log(`${data}`);
+  });
+
+
 
   return conn;
 
